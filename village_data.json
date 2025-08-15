@@ -1,0 +1,154 @@
+
+{
+  "_copyright_and_usage_notice": "This data file was created and is owned by Narendra Khadayat also meticulously researched, compiled, and fact-checked by Narendra Khadayat. It represents a significant investment of time and effort. Please respect this work. You are welcome to use this data for non-commercial purposes with clear attribution to the author and a link to the original website. For any other use, please contact the author. Thank you!",
+
+  "developer": "Narendra Khadayat",
+
+  "fallback": {
+    "en": "I'm sorry, I'm not sure how to answer that. Could you ask me about the location, festivals, people, or developer of this page?",
+    "ne": "माफ गर्नुहोस्, मलाई यसको जवाफ थाहा भएन। के तपाईं मलाई बारिल गाउँको स्थान, चाडपर्व, मानिसहरू, वा विकासकर्ताको बारेमा सोध्न सक्नुहुन्छ?"
+  },
+  "topics": {
+    "greetings": {
+      "keywords": ["hello", "hi", "namaste", "hey", "good morning"],
+      "response": {
+        "en": "Namaste! I am the Baril Village Assistant. How can I help you today?",
+        "ne": "नमस्ते! म बारिल गाउँ सहयोगी हुँ। मैले आज तपाईंलाई कसरी मद्दत गर्न सक्छु?"
+      }
+    },
+    "how_are_you": {
+      "keywords": ["how are you", "how's it going", "sanchai", "kasto cha", "how you doing","whats up", "के छ", "कस्तो छ"],
+      "response": {
+        "en": "I'm doing great, thank you for asking! I'm ready to tell you all about Baril village.",
+        "ne": "मलाई सन्चै छ, सोध्नुभएकोमा धन्यवाद! म तपाईंलाई बारिल गाउँको बारेमा सबै कुरा बताउन तयार छु।"
+      }
+    },
+    "bot_name": {
+      "keywords": ["your name","what is your name", "do you have name", "whats your name", "who are you", "timro naam", "तपाईंको नाम", "को हो"],
+      "response": {
+        "en": "I don't have a personal name, but you can call me the 'Baril Village Assistant'. My purpose is to help you.",
+        "ne": "मेरो व्यक्तिगत नाम छैन, तर तपाईं मलाई 'बारिल गाउँ सहयोगी' भन्न सक्नुहुन्छ। मेरो उद्देश्य तपाईंलाई मद्दत गर्नु हो।"
+      }
+    },
+    "about baril": {
+      "keywords": ["about baril", "info", "tell me about baril", "baril"],
+      "response": {
+        "en": "Baril is a picturesque village in Darchula district, nestled in the Himalayas at 3,100 ft elevation. Home to about 1,000 residents, our community celebrates vibrant festivals like Goura Parva and Dashain, worships at ancient temples like Malikarjun, Latinath and cultivates golden fields of rice, wheat, and corn. The village shines with natural beauty and rich traditions!",
+        "ne": "बारिल दार्चुला जिल्लाको ३,१०० फिट उचाइमा हिमालको गोदमा बसेको सुन्दर गाउँ हो। यहाँ लगभग १,००० जनता बसोबास गर्छन्, जसले गौरा पर्व, दशैं जस्ता चाडहरू मनाउँछन्, मलिकार्जुन मन्दिर जस्ता धार्मिक स्थलहरूमा पूजा गर्छन्, र चामल, गहुँ, जग्गा जस्ता बालीहरू उत्पादन गर्छन्। प्रकृति र संस्कृतिले भरिएको यो गाउँ साँच्चिकै मनमोहक छ!"
+      }
+    },
+
+    "location": {
+      "keywords": ["location", "where", "map", "address", "find", "coordinates", "kasari jane", "स्थान", "कहाँ"],
+      "response": {
+        "en": "Baril village is in Ward no. 1 of Shailyashikhar Municipality, Darchula. The administrative Ward Office is in Balanch. You can find it at coordinates: <a href='https://www.google.com/maps?q=29.694400,80.670941' target='_blank'>29.694400, 80.670941</a>.",
+        "ne": "बारिल गाउँ शैल्यशिखर नगरपालिकाको वडा नम्बर १, दार्चुलामा पर्दछ। प्रशासनिक वडा कार्यालय बालान्चमा छ। तपाईंले यसलाई निर्देशांकमा पाउन सक्नुहुन्छ: <a href='https://www.google.com/maps?q=29.694400,80.670941' target='_blank'>२९.६९४४००, ८०.६७०९४१</a>।"
+      }
+    },
+    "festivals": {
+      "keywords": ["festival","fest", "celebration", "culture", "parva", "chaadparba", "त्योहार", "चाड"],
+      "response": {
+        "en": "Our main festivals are Goura Parva, Bisu Parva (New Year), Shivratri, Holi, Dashain, and Tihar etc. Each one is celebrated with unique cultural traditions.",
+        "ne": "हाम्रा मुख्य चाडपर्वहरू गौरा पर्व, बिसु पर्व (नयाँ वर्ष), दशैं, र तिहार हुन्। प्रत्येक चाड विशेष सांस्कृतिक परम्पराहरूसँग मनाइन्छ।"
+      }
+    },
+    "people": {
+      "keywords": ["people", "population", "titara", "khadayat", "community", "language", "doteli", "family", "society", "मानिस", "जनसंख्या", "भाषा"],
+      "response": {
+        "en": "Around ~1000 people from the Khas/Chhetri community live in Baril. Common family names are Khadayat, Titara, and Biswakarma. The primary local language is Doteli.",
+        "ne": "बारिलमा खस/क्षेत्री समुदायका करिब १००० मानिसहरू बस्छन्। सामान्य थरहरू खडायাত, टिटारा, र विश्वकर्मा हुन्। मुख्य स्थानीय भाषा डोटेली हो।"
+      }
+    },
+    "temples": {
+      "keywords": ["temple", "mandir", "religion", "deities", "gods", "ancestral deities", "मन्दिर", "धार्मिक", "देवता"],
+      "response": {
+        "en": "Our main religious sites are the Malikarjun Temple, Latinath Temple, and Rupadevi Temple. Lord Malikarjun, Lord Latinath are main & very important deity in our region. ",
+        "ne": "हाम्रा मुख्य धार्मिक स्थलहरू मल्लिकार्जुन मन्दिर, लाटिनाथ मन्दिर, र रूपादेवी मन्दिर हुन्। भगवान मल्लिकार्जुन हाम्रो क्षेत्रमा एक धेरै महत्त्वपूर्ण देवता हुनुहुन्छ।"
+      }
+    },
+    "farming": {
+        "keywords": ["farming", "agriculture", "crops", "economy", "खेती", "बाली", "कृषि"],
+        "response": {
+            "en": "The economy is mainly based on agriculture. The primary crops grown here are Rice, Wheat, Barley, and Corn etc.",
+            "ne": "अर्थतन्त्र मुख्यतया कृषिमा आधारित छ। यहाँ उब्जाउने मुख्य बालीहरू धान, गहुँ, जौ र मकै हुन्।"
+        }
+    },
+    "developer1": {
+        "keywords": ["developer", "creator", "who made this page", "made by", "built", "narendra", "Narendra khadayat","निर्माता", "विकासकर्ता"],
+        "response": {
+            "en": "This website was developed out of passion by Narendra Khadayat, who dedicated his time and effort to crafting it with care. We hope you enjoy exploring it as much as it was a joy to create.",
+            "ne": "यो वेबसाइट नरेन्द्र खडायतले आफ्नो रुचि र उत्साहका साथ विकास गर्नुभएको हो । यसलाई बनाउन जत्तिकै तपाईंले प्रयोग गर्दा आनन्द पाउनुहोस् भन्ने हाम्रो चाहना छ ।"
+        }
+    },
+    "emergency": {
+      "keywords": ["emergency", "help", "contact", "police", "ambulance", "आपतकालीन", "सहयोग", "सम्पर्क"],
+      "response": {
+        "en": "For emergencies, please contact the local police or the nearest health post immediately. The Ward Office in Balanch can also provide assistance during office hours.",
+        "ne": "आपतकालीन अवस्थामा, कृपया तुरुन्तै स्थानीय प्रहरी वा नजिकको स्वास्थ्य चौकीमा सम्पर्क गर्नुहोस्। बालान्चमा रहेको वडा कार्यालयले पनि कार्यालय समयमा सहयोग गर्न सक्छ।"
+      }
+    },
+    "education": {
+      "keywords": ["school", "education", "Latinath Basic School", " Krishna Secondary School", "college", "padhai", "शिक्षा", "स्कुल", "पढाइ"],
+      "response": {
+        "en": "Latinath Basic School and Krishna Secondary School are the main schools for our village, located at Chantoli and Balanch respectively. For higher education, students typically go to the Kathmandu, Dhangadi, Mahendranagar etc.",
+        "ne": "हाम्रो गाउँका प्रमुख विद्यालयहरू लटिनाथ आधारभूत विद्यालय (चन्तोलीमा अवस्थित) र कृष्ण माध्यमिक विद्यालय (बलाञ्चमा अवस्थित) हुन्। उच्च शिक्षाका लागि विद्यार्थीहरू प्रायः काठमाडौं, धनगढी, महेन्द्रनगर आदि स्थानतर्फ जाने गर्छन्।"
+      }
+    },
+    "governance": {
+      "keywords": ["ward office", "balanch", "government", "sarpanch", "panchayat", "woda", "karyalaya", "सरकार", "वडा"],
+      "response": {
+        "en": "Baril is under Ward no. 1 of Shailyashikhar Municipality. The Ward Office is located in the neighboring village of Balanch.",
+        "ne": "बारिल शैल्यशिखर नगरपालिकाको वडा नम्बर १ अन्तर्गत पर्दछ। वडा कार्यालय छिमेकी गाउँ बालान्चमा अवस्थित छ।"
+      }
+    },
+    "history": {
+      "keywords": ["history", "past", "old", "itihas", "इतिहास", "पुरानो"],
+      "response": {
+        "en": "Baril has a rich history, with generations of families living here for centuries. Our traditions are deeply connected to the land and the Malikarjun deity.",
+        "ne": "बारिलको एक समृद्ध इतिहास छ, जहाँ शताब्दीयौंदेखि परिवारका पुस्ताहरू बसोबास गर्दै आएका छन्। हाम्रा परम्पराहरू भूमि र मल्लिकार्जुन देवतासँग गहिरो रूपमा जोडिएका छन्।"
+      }
+    },
+    "capabilities": {
+      "keywords": ["help", "what can you do", "menu", "options", "सहयोग", "मेनु"],
+      "response": {
+        "en": "I can tell you about Baril's location, festivals, people, history, education, and local services. You can also ask me about the developer of this website. What would you like to know?",
+        "ne": "म तपाईंलाई बारिलको स्थान, चाडपर्व, मानिसहरू, इतिहास, शिक्षा, र स्थानीय सेवाहरूको बारेमा बताउन सक्छु। तपाईं मलाई यो वेबसाइटको विकासकर्ताको बारेमा पनि सोध्न सक्नुहुन्छ। तपाईं के जान्न चाहनुहुन्छ?"
+      }
+    },
+    "weather": {
+      "keywords": ["weather","season","temperature", "sunny", "rain", "mausam", "मौसम", "पानी"],
+      "response": {
+        "en": "Summer, winter, and rainy are the common seasons in Baril. you can check live weather in our home page above. but I hope it's a beautiful day in Baril! The weather in the hills can change quickly.",
+        "ne": "बारिलमा गर्मी, जाडो र वर्षा सामान्य ऋतु हुन्। म प्रत्यक्ष मौसम जाँच गर्न सक्दिन, तर मलाई आशा छ बारिलमा आजको दिन सुन्दर छ! पहाडको मौसम छिट्टै परिवर्तन हुन सक्छ।"
+      }
+    },
+    "compliment": {
+      "keywords": ["good bot", "wow", "nice job", "you are smart", "clever", "helpful", "राम्रो"],
+      "response": {
+        "en": "Thank you! I'm glad I could be helpful. Is there anything else about Baril  I can assist you with?",
+        "ne": "धन्यवाद! म मद्दत गर्न पाउँदा खुसी छु। के म तपाईंलाई बारिल गाउँको बारेमा अरू केहि मद्दत गर्न सक्छु?"
+      }
+    },
+        "how_to_visit": {
+      "keywords": ["visit", "how to visit", "direction", "travel", "transport", "get there", "bus", "flight", "kasari jane", "जाने", "बस", "यातायात"],
+      "response": {
+        "en": "Reaching Baril involves a multi-step journey. First, you would typically travel to Dhangadhi, which has the nearest major airport. From Dhangadhi, you can take a bus or jeep to the Gokuleshwor, Balanch, Simar, Ganna, Latinath or Darchula. if you are at Darchula, local transport is available to reach the Balanch then Baril village.",
+        "ne": "बारिल पुग्न, पहिलो चरणमा, सामान्यतया सबैभन्दा नजिकको ठूलो विमानस्थल रहेको धनगढी पुगिन्छ। धनगढीबाट बस वा जीपमार्फत गोकुलेश्वर, बलाञ्च, सिमार, गन्ना, लतिनाथ वा दार्चुला पुग्न सकिन्छ। यदि तपाईं दार्चुलामा हुनुहुन्छ भने, स्थानीय यातायात प्रयोग गरेर बलाञ्च पुग्न सकिन्छ, त्यहाँबाट बरिल गाउँ जान सकिन्छ।"
+      }
+    },
+    "thanks": {
+        "keywords": ["thanks", "thank you", "dhanyabad", "great", "awesome"],
+        "response": {
+            "en": "You're very welcome! Is there anything else I can help you with?",
+            "ne": "तपाईंलाई स्वागत छ! के म तपाईंलाई अरू केहिमा मद्दत गर्न सक्छु?"
+        }
+    },
+    "goodbye": {
+        "keywords": ["bye", "goodbye", "see you"],
+        "response": {
+            "en": "Goodbye! Have a great time.",
+            "ne": "फेरि भेटौंला! तपाईंको समय शुभ रहोस्।"
+        }
+    }
+  }
+}

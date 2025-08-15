@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="description" content="Welcome to Baril, a beautiful and peaceful village located in Shailyashikhar-1, Baril, Darchula, Sudurpashchim, Nepal. Discover our local culture, Food, traditions, history, Language, Festivals, monastery/temples, sacred/worship places, and the Beauty of our community.">
+        <meta name="keywords" content="Baril, Shailyashikhar-1, Baril-1, Sudurpashchim, Mahakali, Shikhar, Khadayat, Titara, Biswakarma, Balanch, Nepal, Khash, chettry, Goura, Bisu-parb, Latinath">
+        <meta name="geo.position" content="29.694400;80.670941">
+        <meta name="ICBM" content="29.694400, 80.670941">
+        <meta name="google-site-verification" content="GOOGLE_VERIFICATION_CODE"> <!--Google Verf. code (P)-->
+        <meta name="msvalidate.01" content="BING_VERIFICATION_CODE"> <!--Bing verf. Code(P)-->
+        <!-- Open Graph -->
+        <meta property="og:title" content="Baril Village | Shailyashikhar-1, Darchula, Nepal">
+        <meta property="og:description" content="Discover Baril's culture, history, festivals, and natural beauty in the heart of Nepal's Sudurpashchim Province.">
+        <meta property="og:image" content="https://baril-village.vercel.app/images/baril-thumbnail.jpg">
+        <meta property="og:url" content="https://baril-village.vercel.app">
+        <meta property="og:type" content="website">
+        <!-- Twitter / X -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Baril Village | Shailyashikhar-1, Darchula, Nepal">
+        <meta name="twitter:description" content="Discover Baril's culture, history, festivals, and natural beauty in the heart of Nepal's Sudurpashchim Province.">
+        <meta name="twitter:image" content="https://baril-village.vercel.app/images/baril-thumbnail.jpg">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <meta name="author" content="Narendra Khadayat">
+
+        <title>Baril | Shailyashikhar-1, Darchula, Nepal | Website</title>
+        <!-- Favicon -->
+        <!-- Apple touch icon for iOS -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+
+        <!-- Android/Chrome icons -->
+        <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+
+        <!-- Standard favicons -->
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+
+        <!-- Classic .ico fallback -->
+        <link rel="shortcut icon" href="favicon/favicon.ico">
+
+        <!-- Optional: manifest file for app-like install (PWA) -->
+        <link rel="manifest" href="favicon/site.webmanifest">
+
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <!-- Leaflet CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+
+        <!-- -----------------for map  -->
+
+        <!-- Leaflet CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+        <!-- Leaflet JS -->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+        <!-- Leaflet plugins -->
+        <script src="https://unpkg.com/leaflet.locatecontrol@0.76.0/dist/L.Control.Locate.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol@0.76.0/dist/L.Control.Locate.min.css" />
+        <script src="https://unpkg.com/leaflet.fullscreen@2.4.0/Control.FullScreen.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet.fullscreen@2.4.0/Control.FullScreen.min.css" />
+
+        <!-- For Setelite map view -->
+        <!-- Leaflet CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+        <!-- Leaflet JS -->
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+        <!-- Esri Leaflet for Satellite Imagery -->
+        <script src="https://unpkg.com/esri-leaflet@3.0.10/dist/esri-leaflet.js"></script>
+        <script src="https://unpkg.com/esri-leaflet-vector@3.0.3/dist/esri-leaflet-vector.js"></script>
+
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <!-- Header/Navigation -->
+        <header class="header">
+            <!-- Language Toggle -->
+            <div class="language-wrapper">
+                <div class="language-toggle">
+                    <button id="langToggle" aria-label="Toggle language">
+                        <span class="english">EN</span>
+                        <span class="nepali" style="display:none;">ने</span>
+                    </button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="logo">
+                    <img src="./images/baril_logo.png" alt="Baril Village Logo">
+                    <h1>Baril Village</h1>
+                </div>
+            
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#history">History</a></li>
+                        <li><a href="#culture">Culture</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#map">Map</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+    
+    
+     
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+        <!-- Background image with overlay for better text visibility -->
+            <div class="hero-background" style="background-image: url('./images/Baril_favicon.png');"></div>
+
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+
+                    <!-- Main heading with shadow for better contrast -->
+                    <h1 class="baril-heading">
+                        <span class="baril-name"
+                        data-en="Baril Welcomes You !"
+                        data-ne="बारिल तपाईंलाई स्वागत गर्दछ !"></span><br>
+                        <span class="baril-sub"
+                        data-en="with Open Arms and Timeless Beauty"
+                        data-ne="खुला हृदय र अनन्त सौन्दर्यका साथ"></span>
+                    </h1> 
+
+                
+                    <!-- Subtitle with semi-transparent background -->
+                    <p class="subtitle" data-en="“Mother and motherland are greater than heaven !”" data-ne="“जननी जन्मभूमिश्च स्वर्गादपि गरीयसी !”"></p>
+                
+                    <!-- Stats container with glassmorphism effect -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <span class="stat-number" id="visitorCount">0</span>
+                            <span class="stat-label" data-en="Visitors" data-ne="आगन्तुक"></span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label" data-en="“HEAVEN IS MYTH, BARIL IS REAL !”" data-ne="“स्वर्ग केवल कल्पना हो, बारिल त यथार्थ हो !”"></span>
+                            <span id=""></span>
+                        </div>
+                        <div class="stat-item">
+                            <img src="./images/nepal-11722.gif"
+                            alt="Nepal Flag Waving in Wind"
+                            class="flag-waving" />
+                        </div>
+                    </div>
+
+                    <a href="#about" class="baril-btn" data-en="Explore More" data-ne="थप जान्नुहोस्">
+                        <span>Explore More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- closing </section> tag of hero -->
+            <div class="hero-weather-widget">
+                <div class="weather-card-compact">
+                    <div class="weather-main">
+                        <i class="fas fa-sun weather-icon-compact" id="weatherIcon"></i>
+                        <div class="temp-compact" id="temperature">--°C</div>
+                    </div>
+                    <div class="weather-details-compact">
+                        <div class="condition-compact" id="weatherCondition" data-en="Loading..." data-ne="लोड हुँदै..."></div>
+                        <div class="weather-stats-compact">
+                            <span><i class="fas fa-tint"></i> <span id="humidity">--%</span></span>
+                            <span><i class="fas fa-wind"></i> <span id="windSpeed">-- km/h</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+     
+
+        <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="About Baril Village" data-ne="बारिल गाउँको बारेमा"></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle" data-en="Discover our beautiful village" data-ne="हाम्रो सुन्दर गाउँको बारेमा जान्नुहोस्"></p>
+            </div>
+            
+            <section class="about-blog">
+            <h1>
+            <span data-en="🌿 Baril: Where Nature's Essence, Ancient Culture &amp; Divine Spirit Unite in Eternal Harmony" data-ne="🌿 बारिल: जहाँ प्रकृतिको वरदान, प्राचीन संस्कृति र दिव्य आत्मा अनि अनन्त सद्भावमा एक हुन्छन्"></span>
+            </h1>
+            <p>
+            <span data-en="The sacred " data-ne="पवित्र "></span>
+            <strong data-en="Chameliya River," data-ne="चमेलिया नदी,"></strong>
+            <span data-en=" revered locally as " data-ne=" जसलाई स्थानीय रूपमा "></span>
+            <strong data-en="Choulaani," data-ne="चौलानी नदी"></strong>
+            <span data-en=" springs forth from the glacial womb of " data-ne=" भनिन्छ, "></span>
+            <strong data-en=" API HIMAL" data-ne="अपि हिमालको"></strong>
+            <span data-en=" — its primordial birthplace — and flows with eternal grace beside " data-ne=" कोखबाट  — यसको आदिम जन्म हुदै  — निस्कन्छ र सुस्केरा हाल्दै "></span>
+            <strong data-en=" Baril village." data-ne="बारिल गाउँको"></strong>
+            <span data-en="" data-ne=" छेउबाट स्वतन्त्र का साथ बग्दछ।"></span>
+            </p>
+            <p>
+            <span data-en="Enfolded within the " data-ne="सुदूरपश्चिम प्रदेशको "></span>
+            <strong data-en="majestically rugged hills of Sudurpashchim Province" data-ne="गगनचुम्बी पहाडहरू"></strong>
+            <span data-en=", " data-ne=" भित्र समेटिएको, "></span>
+            <strong data-en="Baril" data-ne="बारिल"></strong>
+            <span data-en=" emerges—a profoundly soul-stirring hamlet cradled in " data-ne=" — शैल्यशिखर नगरपालिकाको वडा नम्बर १ मा रहेको एक गहिरो सुन्दर गाउँ, "></span>
+            <strong data-en="Ward No. 1 of Shailyashikhar Municipality" data-ne="नेपालको"></strong>
+            <span data-en=", within " data-ne=" पवित्र "></span>
+            <strong data-en="Nepal's" data-ne="दार्चुला जिल्ला"></strong>
+            <span data-en=" sacred " data-ne=" भित्र पर्दछ। यो "></span>
+            <strong data-en="Darchula District" data-ne="लगभग ३,१०० फिटको"></strong>
+            <span data-en=". It ascends to an elevation of " data-ne=" उचाइमा अवस्थित छ, जसले अलौकिक दृश्यहरू र "></span>
+            <strong data-en="approximately 3,100 feet" data-ne="पुरानो,"></strong>
+            <span data-en=", bestowing ethereal vistas and crystalline mountain air that whispers of " data-ne=" कालातीत अस्तित्वको"></span>
+            <strong data-en="pristine, timeless existence" data-ne=" आभास दिने क्रिस्टल जस्तो सफा लेकाली हावा प्रदान गर्दछ।"></strong>
+            <span data-en="." data-ne=""></span>
+            </p>
+
+            <p>
+            <span data-en="Baril transcends mere geography—it is a " data-ne="बारिल केवल भूगोल मात्र होइन—यो "></span>
+            <strong data-en="living, breathing tapestry of ancestral legacy, soul-deep simplicity, and cosmic harmony" data-ne="पुर्ख्यौली विरासत, आत्मीय सरलता, र ब्रह्माण्डीय सद्भावको एक जीवन्त, सास फेर्ने चित्र"></strong>
+            <span data-en="." data-ne=" हो।"></span>
+            </p>
+
+            <p>
+            <span data-en="A " data-ne=""></span>
+            <strong data-en="tight-knit community of nearly ~1,000 souls" data-ne="लगभग १००० मानिसहरूको एक कसिलो समुदाय"></strong>
+            <span data-en=" inhabits this hallowed ground spanning " data-ne=" यो पवित्र भूमिमा बसोबास गर्दछ, जुन "></span>
+            <strong data-en="~9 lakh square meters" data-ne="~९ लाख वर्ग मिटरमा"></strong>
+            <span data-en=". Their voices resonate with " data-ne=" फैलिएको छ। उनीहरूको आवाज "></span>
+            <strong data-en="Doteli" data-ne="डोटेली भाषा सँग प्रतिध्वनित हुन्छ"></strong>
+            <span data-en="—the " data-ne="—"></span>
+            <strong data-en="heartbeat language" data-ne="जुन पूर्वजहरूको धड्कनको भाषा"></strong>
+            <span data-en=" of their forebears—predominantly belonging to the " data-ne="—सँगै गुन्जिन्छ, जसमा मुख्यतया "></span>
+            <strong data-en="proud Khas/Chhetri lineage" data-ne=" खस/क्षेत्री वंशका"></strong>
+            <span data-en=", with dynastic bloodlines like " data-ne=" मानिसहरू छन्, जसमा "></span>
+            <strong data-en="Khadayat" data-ne="खडायत"></strong>
+            <span data-en=", " data-ne=", "></span>
+            <strong data-en="Titara" data-ne="तितरा"></strong>
+            <span data-en=", and " data-ne=", र "></span>
+            <strong data-en="Biswakarma" data-ne="विश्वकर्मा"></strong>
+            <span data-en=" " data-ne=" जस्ता थरहरू "></span>
+            <strong data-en="eternally woven into its cultural soul" data-ne="यसको सांस्कृतिक आत्मामा अनन्त रूपमा बुनिएका"></strong>
+            <span data-en="." data-ne=" छन्।"></span>
+            </p>
+
+            <p>
+            <strong data-en="Agriculture" data-ne="कृषि"></strong>
+            <span data-en=" constitutes the " data-ne=" बारिलको अस्तित्वको "></span>
+            <strong data-en="sacred lifeblood" data-ne="पवित्र जीवनरेखा"></strong>
+            <span data-en=" of Baril's existence. Generations pour " data-ne=" हो। पुस्ताहरूले "></span>
+            <strong data-en="fierce devotion" data-ne="मेहनत अनि प्रगाढ भक्ति"></strong>
+            <span data-en=" into the soil, cultivating " data-ne=" माटोमा खन्याउदै, पुर्ख्यौली परम्परागत ज्ञान अनि सीपहरू सँगै "></span>
+            <strong data-en="Rice, Wheat, Barli" data-ne="धान, गहुँ, जौ"></strong>
+            <span data-en=", " data-ne=", "></span>
+            <strong data-en="corn" data-ne="मकै"></strong>
+            <span data-en=" and many more with ancestral wisdom. Alongside this " data-ne=" र अरू धेरै खेती गर्छन्। "></span>
+            <strong data-en="fervent communion with earth" data-ne="पृथ्वीसँगको यो जोशपूर्ण सम्बन्धको"></strong>
+            <span data-en=", many villagers serve as " data-ne=" साथसाथै, धेरै गाउँलेहरू "></span>
+            <strong data-en="government stewards, wisdom-keepers (teachers), and valiant military guardians" data-ne="सरकारी सेवक, ज्ञान-रक्षक (शिक्षक), र वीर सैनिक संरक्षकको"></strong>
+            <span data-en="—manifestations of " data-ne=" रूपमा सेवा गर्दछन्—जुन "></span>
+            <strong data-en="unshakeable national pride" data-ne="अडिग राष्ट्रिय गौरवको"></strong>
+            <span data-en="." data-ne=" अभिव्यक्ति हो।"></span>
+            </p>
+
+            <p>
+            <span data-en="The " data-ne="यहाँको "></span>
+            <strong data-en="spiritual undercurrent here flows fathomless" data-ne="आध्यात्मिक अन्तर्धारा अथाह रूपमा बग्दछ"></strong>
+            <span data-en=". Baril is encircled by sanctuaries like " data-ne="। बारिल "></span>
+            <strong data-en="Malikarjun" data-ne="मालिकार्जुन"></strong>
+            <span data-en=", " data-ne=", "></span>
+            <strong data-en="Latinath" data-ne="लटिनाथ"></strong>
+            <span data-en=", " data-ne=", "></span>
+            <strong data-en="Rupadevi" data-ne="धौँकुच्हे, रूपादेवी"></strong>
+            <span data-en=", and " data-ne=", र "></span>
+            <strong data-en="Samaiji" data-ne="समैजी, भमक"></strong>
+            <span data-en=", where " data-ne=" जस्ता पवित्र स्थलहरूले घेरिएको छ, जहाँ "></span>
+            <strong data-en="millennia-old rituals pulse with unwavering devotion" data-ne="हजारौं वर्ष पुराना अनुष्ठानहरू अटुट भक्तिले धड्किन्छन्"></strong>
+            <span data-en=". These are not only mere temples—they are the " data-ne="। यी केवल मन्दिरहरू मात्र होइनन्—यी समुदायका "></span>
+            <strong data-en="eternal soul-keepers of the community" data-ne="अनन्त आत्मा-रक्षकहरू"></strong>
+            <span data-en="." data-ne=" हुन्।"></span>
+            </p>
+
+            <p>
+            <span data-en="Baril's heart beats through cherished hamlets: " data-ne="बारिलको मुटु प्रिय बस्तीहरूमा धड्किन्छ: "></span>
+            <strong data-en="Tupgaan" data-ne="तुप्गान"></strong>
+            <span data-en=", " data-ne=", "></span>
+            <strong data-en="Baagmore" data-ne="बग्मोउरे"></strong>
+            <span data-en=", " data-ne=", "></span>
+            <strong data-en="Malla Gau" data-ne="मल्ला गाउँ"></strong>
+            <span data-en=", " data-ne=", "></span>
+            <strong data-en="Talla Gau" data-ne="तल्ला गाउँ"></strong>
+            <span data-en=", " data-ne=", "></span>
+            <strong data-en="Kotbaril" data-ne="कोटबारिल"></strong>
+            <span data-en=", " data-ne=", "></span>
+            <strong data-en="Tirsha, Khalibagad" data-ne="तिर्सा, खालिबगड"></strong>
+            <span data-en=", and " data-ne=", र "></span>
+            <strong data-en="Sittoli" data-ne="सिट्टोली"></strong>
+            <span data-en=". Pilgrimage Place like " data-ne="। "></span>
+            <strong data-en="Bhamak" data-ne="भमक"></strong>
+            <span data-en=" Each radiates " data-ne=" जस्ता ठाउँहरूले "></span>
+            <strong data-en="distinct, captivating mystique" data-ne="विशेष, मनमोहक रहस्य"></strong>
+            <span data-en="—their stories and traditions echoing a " data-ne=" फैलाउँछन्—यहाँका कथाहरू र परम्पराहरूले "></span>
+            <strong data-en="profoundly interconnected existence" data-ne="गहिरो अन्तरसम्बन्धित अस्तित्वको"></strong>
+            <span data-en="." data-ne=" प्रतिध्वनि गर्छन्।"></span>
+            </p>
+
+            <p>
+            <span data-en="Festivals ignite as " data-ne="चाडपर्वहरू "></span>
+            <strong data-en="transcendent spiritual experiences" data-ne="उत्कृष्ट आध्यात्मिक अनुभवको"></strong>
+            <span data-en=". The village erupts in " data-ne=" रूपमा प्रज्वलित हुन्छन्। गाउँ "></span>
+            <strong data-en="ecstatic celebration" data-ne="उल्लासमय उत्सवमा"></strong>
+            <span data-en=" for " data-ne=" डुब्छ "></span>
+            <strong data-en="Hindu festivals" data-ne="हिन्दू चाडपर्वहरूमा"></strong>
+            <span data-en=" like " data-ne=" जस्तै "></span>
+            <strong data-en="Dashain" data-ne="दशैं"></strong>
+            <span data-en=", " data-ne=", "></span>
+            <strong data-en="Tihar" data-ne="तिहार"></strong>
+            <span data-en=", " data-ne=", "></span>
+            <strong data-en="Goura Parva" data-ne="गौरा पर्व"></strong>
+            <span data-en=", " data-ne=", "></span>
+            <strong data-en="Bisu Parva (New Year)" data-ne="बिसु पर्व (नयाँ वर्ष)"></strong>
+            <span data-en=", " data-ne=", "></span>
+            <strong data-en="Maghe Sankranti (Narahari)" data-ne="माघे संक्रान्ति (नरहरी)"></strong>
+            <span data-en=", " data-ne=", "></span>
+            <strong data-en="Teej" data-ne="तीज"></strong>
+            <span data-en=", " data-ne=", "></span>
+            <strong data-en="Holi (Phagu Purnima)" data-ne="होली (फागु पूर्णिमा)"></strong>
+            <span data-en=", " data-ne=", "></span>
+            <strong data-en="Shivaratri" data-ne="शिवरात्रि"></strong>
+            <span data-en=", and " data-ne=", र "></span>
+            <strong data-en="Janai Purnima" data-ne="जनै पूर्णिमा"></strong>
+            <span data-en="—transforming into a " data-ne="—जसले "></span>
+            <strong data-en="kaleidoscopic vortex of color, primal dance, soulful prayer, and unbreakable unity" data-ne="रंग, मौलिक नृत्य, आत्मीय प्रार्थना, र अटुट एकताको बहुरंगी भावमा"></strong>
+            <span data-en=", and Local " data-ne=" रूपान्तरण गर्दछ, र स्थानीय "></span>
+            <strong data-en="Deuda Khel, Deuda Song, Thadi Bhaka " data-ne="देउडा खेल, देउडा गीत, ठाडी भाका"></strong>
+            <span data-en=" and spiritual Music " data-ne=" र आध्यात्मिक संगीतले "></span>
+            <strong data-en="preserves its identiity." data-ne="आफ्नो पहिचान जोगाउँछ।"></strong>
+            </p>
+
+            <p>
+            <span data-en="The " data-ne="छिमेकी गाउँ "></span>
+            <strong data-en="ward office" data-ne="बलाँचमा रहेको वडा कार्यालय शासनको"></strong>
+            <span data-en=" in " data-ne=" "></span>
+            <strong data-en="Balanch" data-ne="प्रशासनिक"></strong>
+            <span data-en=" stands as the " data-ne="केन्द्रको"></span>
+            <strong data-en="administrative nucleus" data-ne="रूपमा"></strong>
+            <span data-en=" for governance. Even in its " data-ne="खडा छ। आफ्नो "></span>
+            <strong data-en="rooted authenticity" data-ne="मौलिकतामा जरा गाडेर"></strong>
+            <span data-en=", Baril embraces modernity. Discover its " data-ne=" पनि, बारिलले आधुनिकतालाई अँगालेको छ। यसको "></span>
+            <strong data-en="terrestrial coordinates" data-ne="स्थलीय निर्देशांक"></strong>
+            <span data-en=" at "></span>
+            <a href="https://www.latlong.net/c/?lat=29.694400&long=80.670941" target="_blank" data-en="29.694400, 80.670941" data-ne="२९.६९४४००, ८०.६७०९४१"></a>
+            <span data-en="." data-ne=" मा नियाल्न सक्नु हुन्छ।"></span>
+            </p>
+
+            <blockquote>
+            <span data-en="“" data-ne="“"></span>
+            <strong data-en="Heaven is myth. Baril is living truth." data-ne="स्वर्ग कल्पना हो। बारिल जीवित सत्य हो।"></strong>
+            <span data-en="”" data-ne="”"></span>
+            </blockquote>
+
+            <p>
+            <span data-en="From its " data-ne="आफ्नो "></span>
+            <strong data-en="soaring heights to its indomitable spirit" data-ne="उचाइदेखि अन्नंत आत्मासम्म"></strong>
+            <span data-en=", Baril embodies the " data-ne=", बारिलले "></span>
+            <strong data-en="quintessential soul of Nepal" data-ne="नेपालकै सर्वोत्कृष्ट आत्मालाई"></strong>
+            <span data-en="—" data-ne=" मूर्त रूप दिन्छ—"></span>
+            <strong data-en="humble yet majestic, eternally rooted, radiating boundless grace" data-ne="विनम्र तर राजसी, अनन्त रूपमा जरा गाडेको, असीम कृपा फैलाउने"></strong>
+            <span data-en=". Whether seeking ancestry, pilgrimage, or digital exploration, Baril extends not information—but " data-ne="बारिल, पुर्खा को रिति-तिथि जगेर्ना, तीर्थयात्रा जस्तै , अब  डिजिटल/आधुनिक"></span>
+            <strong data-en="a soul-embrace of ageless wonder" data-ne="समय लाइ  अंगाल्दै—"></strong>
+            <span data-en="." data-ne=" अगाडी  बढ्नेछ।"></span>
+            </p>
+            </section>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    </section>
+    
+
+    <!-- History Section -->
+    <section id="history" class="section        history-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Our History" data-ne="हाम्रो इतिहास"></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle" data-en="The story of our village" data-ne="हाम्रो गाउँको कथा"></p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year" data-en="1800" data-ne="१८५६"></div>
+                    <div class="timeline-content">
+                        <h3 data-en="Estimated Early Settlement" data-ne="अनुमानित प्रारम्भिक बसोबास"></h3>
+                        <p data-en="
+                         It is believed that the earliest families settled in Baril generations ago, laying the foundation of the village through their deep-rooted connection with the land and a life centered around agriculture."
+                           data-ne="अनुमान गरिन्छ कि पुस्तौं अघि केही परिवारहरूले बारिलमा बसोबासको थालनी गरे, जहाँ उनीहरूको जीवनशैली कृषि र भूमिसँगको गहिरो सम्बन्धमा आधारित थियो।"></p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year" data-en="1954" data-ne="२०११"></div>
+                    <div class="timeline-content">
+                        <h3 data-en="First School Established" data-ne="पहिलो विद्यालय स्थापना"></h3>
+                        <p data-en="The establishment of first primary school at Balanch marked a pivotal moment in the village's history, ushering in the era of formal education for its children."
+                           data-ne="बलाँचमा पहिलो प्राथमिक विद्यालयको स्थापना ऐतिहासिक कदम थियो, जसले गाउँमा बालबालिकाका लागि औपचारिक शिक्षाको युगको सुरुवात गर्‍यो।"></p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year" data-en="2015" data-ne="२०७२"></div>
+                    <div class="timeline-content">
+                        <h3 data-en="Municipality Formation" data-ne="नगरपालिका गठन"></h3>
+                        <p data-en="Baril officially became a part of the newly formed Shailyashikhar Municipality, integrating into a broader administrative structure while preserving its unique cultural identity."
+                           data-ne="बारिल नवगठित शैल्यशिखर नगरपालिकाको हिस्सा बन्यो, जसले प्रशासनिक संरचनामा समावेश हुँदा पनि आफ्नो सांस्कृतिक पहिचानलाई जगेर्ना गर्दै आयो।"></p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year" data-en="Present" data-ne="वर्तमान"></div>
+                    <div class="timeline-content">
+                        <h3 data-en="Modern Development" data-ne="आधुनिक विकास"></h3>
+                        <p data-en="Baril continues to evolve with the development of modern infrastructure—new schools, healthcare facilities, roads, clean drinking water, electricity, and other essential services—while proudly preserving its rich cultural heritage."
+                           data-ne="बारिलले विद्यालय, स्वास्थ्य केन्द्र, बाटो, खानेपानी, बत्ती लगायतका आधारभूत पूर्वाधारहरूमा प्रगति गर्दै आइरहेको छ, यद्यपि आफ्नै मौलिक संस्कृति र परम्परालाई गर्वका साथ संरक्षण गर्दै आएको छ।"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    
+
+    
+    
+    
+    <!-- Culture Section -->
+<section id="culture" class="section culture-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Culture & Traditions" data-ne="संस्कृति र परम्परा"></h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle" data-en="Our rich cultural heritage" data-ne="हाम्रो समृद्ध सांस्कृतिक विरासत"></p>
+        </div>
+        
+        <div class="culture-grid">
+            <!-- Goura Parva -->
+            <div class="culture-card">
+                <div class="culture-img" style="background-image: url('./images/Gaura_parva.jpg');"></div>
+                <h3 data-en="Gaura Parva" data-ne="गौरा पर्व"></h3>
+                <p data-en="Gaura Parva mainly begin from Bhadra Krishna/Shukla Panchami,Celebrated mainly in Sudurpashchim Province, Gaura Parva is a five-day festival where women observe fasts, sing Deuda and Fag songs, and worship Lord Shiva and Goddess Gauri with soaked “biruda” grains. It symbolizes love, devotion, and cultural unity."
+                   data-ne="गौरा पर्व मुख्यतः भाद्र कृष्ण/शुक्ल पञ्चमीबाट सुरु हुन्छ, सुदूरपश्चिममा प्रदेशमा  मनाइने पाँचदिने गौरापर्वमा महिलाहरू व्रत बस्छन्, देउडा, फाग गाउछन्,“बिरुडा” भिजाएर गौरी–शिवको पूजा गर्दछन्। यो पर्व प्रेम, आस्था र सांस्कृतिक एकताको प्रतीक हो।"></p>
+            </div>
+
+            <!-- Jaatra -->
+            <div class="culture-card">
+                <div class="culture-img" style="background-image: url('./images/jaat1.jpg');"></div>
+                <h3 data-en="Jaatra" data-ne="जात्रा"></h3>
+                <p data-en="Held mainly twice a year around Dashain (Month of Ashoj) and Tihar (Month of Kartik)-villagers worship their family deities using traditional instruments like “Damaha”, “Chhadhhanne”, and “Narashingha”. The event features vibrant skills on playing Damaha, traditional music, shamanic dances, and community processions. People gather to offer worship, seek blessings, and celebrate the festival, making it both a deeply spiritual and socially unifying celebration."
+                   data-ne="यो पर्व मुख्यतया वर्षमा दुई पटक मनाइन्छ दशैं (असोज महिना) र तिहार (कार्तिक महिना) को आसपास - गाउँलेहरूले “दमाहा”, “छधन्ने” र “नरसिङ्गा” जस्ता परम्परागत वाद्ययन्त्रहरू प्रयोग गरेर आफ्ना पारिवारिक देवताहरूको पूजा गर्छन्। यस कार्यक्रममा दमाहा बजाउने, परम्परागत संगीत, शमन नृत्य र सामुदायिक जुलुसहरूमा जीवन्त सीपहरू प्रस्तुत गरिन्छ। मानिसहरू पूजा गर्न, आशीर्वाद लिन र उत्सव मनाउन भेला हुन्छन्, जसले गर्दा यो पर्व गहिरो आध्यात्मिक र सामाजिक रूपमा एकताबद्ध उत्सव दुवै हो।"></p>
+            </div>
+
+            <!-- Deuda Khel -->
+            <div class="culture-card">
+                <div class="culture-img" style="background-image: url('./images/deuda.jpg');"></div>
+                <h3 data-en="Deuda Khel" data-ne="देउडा खेल"></h3>
+                <p data-en="Deuda Khel is a traditional folk dance of Sudurpaschim, performed in a circle while singing poetic call-and-response verses. Men and women join hands, step rhythmically, and sing together—strengthening social bonds, expressing emotions, and preserving ancestral culture. Deuda is performed during major festivals like Gaura and other local fairs, becoming a vibrant symbol of identity and unity."
+                   data-ne="देउडा खेल सुदूरपश्चिमको परम्परागत लोकनृत्य हो, जहाँ पुरुष र महिला हात समाएर गोलो घेरा बनाएर लयबद्ध रूपमा कविता शैलीका गीत गाइन्छन्। यसले सामाजिक एकता, भावनात्मक अभिव्यक्ति र सांस्कृतिक पहिचानलाई बलियो बनाउँछ। गौरा तथा स्थानीय मेलापातहरूमा देउडा प्रमुख रूपमा खेलिन्छ, जसले समुदायको मौलिकता र एकतालाई झल्काउँछ।"></p>
+            </div>
+
+            <!-- Rice Harvesting -->
+            <div class="culture-card">
+                <div class="culture-img" style="background-image: url('./images/ropai.jpg');"></div>
+                <h3 data-en="Rice Harvesting" data-ne="धान रोपाइँ"></h3>
+                <p data-en="Rice cultivation in Baril is more than just agriculture—it's a seasonal celebration of community and life. During Ashad and Shrawan, villagers work side by side in lush muddy fields, planting rice while singing traditional songs and sharing laughter. Later in Kartik and Mangsir, the harvest becomes a collective joy as families come together to gather the golden crop. This tradition reflects Baril’s harmony with nature, hard work, and festive rural soul."
+                   data-ne="बारिलमा धान खेती केवल कृषि नभई जीवन र समुदायसँग जोडिएको सांस्कृतिक उत्सव हो। असार र साउनमा खेतमा किसानहरू एकआपसमा सहकार्य गर्दै, परम्परागत गीत गाउदै, रमाइलो गर्दै धान रोप्ने गर्दछन्। कार्तिक र मंसिरमा सुनौलो बाली भित्र्याउँदा परिवारहरू एकत्रित भई आनन्द मनाउँछन्। यस परम्पराले बारिलको प्रकृतिसँगको सामन्जस्य, श्रमको सम्मान र ग्रामीण जीवनको उत्सवलाई झल्काउँछ।"></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+   <section id="gallery" class="section gallery-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Photo Gallery" data-ne="फोटो ग्यालरी"></h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle" data-en="The soul of Baril captured in moments (Visuals)" data-ne="बारिलका आत्मा क्षणहरूमा कैद (दृश्यहरू)"></p>
+        </div>
+        
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all" data-en="All" data-ne="सबै"></button>
+            <button class="filter-btn" data-filter="landscape" data-en="Landscapes" data-ne="प्राकृतिक दृश्य"></button>
+            <button class="filter-btn" data-filter="culture" data-en="Cultural Essence" data-ne="सांस्कृतिक संवेदना"></button>
+            <button class="filter-btn" data-filter="people" data-en="Life & People" data-ne="जीवन र मानिसहरू"></button>
+        </div>
+        
+        <div class="gallery-grid">
+            <!-- Images loaded dynamically (js)-->
+        </div>
+        
+        <div class="text-center">
+            <button class="btn btn-secondary" id="loadMore" data-en="Discover More" data-ne="अझै खोज्नुहोस्"></button>
+        </div>
+    </div>
+    
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal">
+        <span class="close-btn">&times;</span>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img">
+            <div class="lightbox-caption"></div>
+        </div>
+        <a class="prev-btn" aria-label="Previous image">&#10094;</a>
+        <a class="next-btn" aria-label="Next image">&#10095;</a>
+    </div>
+</section>
+
+    <!-- Map Section -->
+    <section id="map" class="section map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Village Map" data-ne="गाउँको नक्सा"></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle" data-en="Explore Baril's geography" data-ne="बारिलको भूगोल अन्वेषण गर्नुहोस्"></p>
+            </div>
+            
+            <div class="map-container">
+                <div id="villageMap"></div>
+            </div>
+            
+            <div class="map-locations">
+                <h3 data-en="Key Locations" data-ne="मुख्य स्थानहरू"></h3>
+                <div class="location-grid">
+
+                    <div class="location-card" data-location="malla" style="background-image: url('./images/malla_gau.jpg')">
+                    <div class="card-overlay"></div>
+                    <h4>Malla Gau</h4>
+                    <button class="btn-locate glass-btn" data-en="View on Map" data-ne="नक्सामा हेर्नुहोस्"></button>
+                    </div>
+
+                    <div class="location-card" data-location="tupgaan" style="background-image: url('./images/tupgan.jpg')">
+                    <div class="card-overlay"></div>
+                    <h4>Tupgaan</h4>
+                    <button class="btn-locate glass-btn" data-en="View on Map" data-ne="नक्सामा हेर्नुहोस्"></button>
+                    </div>
+
+                    <div class="location-card" data-location="talla" style="background-image: url('./images/talla_gau.jpg')">
+                    <div class="card-overlay"></div>
+                    <h4>Talla Gau</h4>
+                    <button class="btn-locate glass-btn" data-en="View on Map" data-ne="नक्सामा हेर्नुहोस्"></button>
+                    </div>
+
+                    <div class="location-card" data-location="kotbaril" style="background-image: url('./images/kotbaril.jpg')">
+                    <div class="card-overlay"></div>
+                    <h4>Kotbaril</h4>
+                    <button class="btn-locate glass-btn" data-en="View on Map" data-ne="नक्सामा हेर्नुहोस्"></button>
+                    </div>
+
+                
+                </div>
+            </div>
+        </div>
+    </section><br><br>
+
+    <!--Developer Terminal -->
+ <section class="developer-section" id="dev-terminal">
+    <div class="container">
+        <div class="code-window">
+            <div class="window-header">
+                <div class="window-buttons">
+                    <span class="close-btn"></span>
+                    <span class="minimize-btn"></span>
+                    <span class="expand-btn"></span>
+                </div>
+                <span class="window-title">terminal_dev_profile.exe</span>
+            </div>
+            
+            <div class="terminal-body">
+                <div class="code-line" data-type="command">> npm init dev_profile --name="Narendra Khadayat"</div>
+                <div class="code-line" data-type="response">√ Package initialized for Baril Village showcase..</div>
+                
+                <div class="developer-card">
+                    <div class="holographic-display">
+                        <div class="hologram-image">
+                            <img src="./images/developer1.jpg" alt="Developer Hologram">
+                            <div class="hologram-effect"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="code-content">
+                        <div class="code-line" data-type="comment">// AboutDeveloper.js</div>
+                        <div class="code-line" data-type="var">const developer = {</div>
+                        <div class="code-line" data-type="property">  origin: <span class="string">"Baril, Darchula, Nepal"</span>,</div>
+                        <div class="code-line" data-type="property">  mission: <span class="string"
+                            data-en="Preserve and showcase Baril's heritage" 
+                            data-ne="बारिलको विरासत संरक्षण र प्रदर्शन गर्नु">
+                        </span>,</div>
+                        <div class="code-line" data-type="property">  skills: [<span class="string">"Web-Dev"</span>, <span class="string">"UI/UX"</span>, <span class="string">"Python"</span>, <span class="string">"AI/ML"</span>, <span class="string">"Cloud"</span>]</div>
+                        <div class="code-line" data-type="var">};</div>
+                        
+                        <div class="contact-commands">
+                            <div class="code-line" data-type="command">> developer.connect()</div>
+                            <div class="terminal-buttons">
+                                <a href="https://github.com/NarendraKhadayat" class="cli-btn" data-en="Contact" data-ne="सम्पर्क"target="_blank" rel="noopener noreferrer"><span class="prompt">$></span> send_message.exe</a>
+                                <div class="social-ports">
+                                    <!-- Facebook -->
+                                    <a href="https://www.facebook.com/narendra.khadayat.1426/" 
+                                    class="port" 
+                                    title="Facebook"
+                                    target="_blank" 
+                                    rel="noopener noreferrer nofollow"
+                                    aria-label="Facebook (opens in new tab)">
+                                    <i class="fab fa-facebook-f"></i>
+                                    </a>
+
+                                    <!-- Instagram -->
+                                    <a href="https://www.instagram.com/narendraa_k_/" 
+                                    class="port" 
+                                    title="Instagram"
+                                    target="_blank" 
+                                    rel="noopener noreferrer nofollow"
+                                    aria-label="Instagram (opens in new tab)">
+                                    <i class="fab fa-instagram"></i>
+                                    </a>
+
+                                    <!-- X (Twitter) -->
+                                    <a href="https://x.com/NarendraKhada12?t=Shj94e79CdVCuqwOtGQ5Kw&s=09" 
+                                    class="port" 
+                                    title="X (Twitter)"
+                                    target="_blank" 
+                                    rel="noopener noreferrer nofollow"
+                                    aria-label="X/Twitter (opens in new tab)">
+                                    <i class="fab fa-x"></i>
+                                    </a>
+
+                                    <!-- GitHub -->
+                                    <a href="https://github.com/NarendraKhadayat" 
+                                    class="port" 
+                                    title="GitHub"
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    aria-label="GitHub (opens in new tab)">
+                                    <i class="fab fa-github"></i>
+                                    </a>
+
+                                    <!-- LinkedIn -->
+                                    <a href="https://www.linkedin.com/in/narendra-khadayat-821aa81ba/" 
+                                    class="port" 
+                                    title="LinkedIn"
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    aria-label="LinkedIn (opens in new tab)">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    </a>
+
+                                    <!-- Docker Hub -->
+                                    <a href="https://hub.docker.com/u/narendrakhadayat" 
+                                    class="port" 
+                                    title="Docker Hub"
+                                    target="_blank" 
+                                    rel="noopener noreferrer nofollow"
+                                    aria-label="Docker Hub (opens in new tab)">
+                                    <i class="fab fa-docker"></i>
+                                    </a>
+
+                                    <!-- Discord -->
+                                    <a href="https://discord.com/users/1115298133124075530" 
+                                    class="port" 
+                                    title="Discord"
+                                    target="_blank" 
+                                    rel="noopener noreferrer nofollow"
+                                    aria-label="Discord (opens in new tab)">
+                                    <i class="fab fa-discord"></i>
+                                    </a>
+
+                                    <!-- Reddit -->
+                                    <a href="https://www.reddit.com/user/OddYogurtcloset2615/" 
+                                    class="port" 
+                                    title="Reddit"
+                                    target="_blank" 
+                                    rel="noopener noreferrer nofollow"
+                                    aria-label="Reddit (opens in new tab)">
+                                    <i class="fab fa-reddit-alien"></i>
+                                    </a>
+
+                                    <!-- Hugging Face -->
+                                    <a href="https://huggingface.co/narendra-khadayat" 
+                                    class="port" 
+                                    title="Hugging Face"
+                                    target="_blank" 
+                                    rel="noopener noreferrer nofollow"
+                                    aria-label="Hugging Face (opens in new tab)">
+                                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" 
+                                    alt="Hugging Face" style="width:20px; vertical-align:middle;"
+                                    class="huggingface-icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="status-bar">
+                    <span class="cursor-blink">█</span>
+                    <span class="typing-text" data-en="Coding the future while preserving our past..." 
+                    data-ne="हाम्रो विगतलाई संरक्षण गर्दै भविष्यको कोडिङ गर्दै..."></span>
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+
+
+    <!-- Contact Us Section -->
+
+ <section id="contact" class="section contact-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" data-en="Contact & Feedback" data-ne="सम्पर्क र प्रतिक्रिया"></h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle" data-en="Connect with Baril" data-ne="बारिल सँग जोडिनुहोस्"></p>
+        </div>
+        
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-comment-dots"></i>
+                </div>
+                <h3 data-en="Quick Contact" data-ne="छिटो सम्पर्क"></h3>
+                
+                <div class="contact-methods">
+                    <a href="tel:+9779812613332" class="contact-method hover-effect" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+977-981261****</span>
+                    </a>
+                    
+                    <a href="mailto:info.barilvillage@gmail.com" class="contact-method hover-effect" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-envelope"></i>
+                        <span>info.barilvillage@gmail.com</span>
+                    </a>
+                    
+                    <div class="contact-method hover-effect">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span data-en="Baril-1, Darchula" data-ne="बारिल गाउँ, दार्चुला"></span>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.facebook.com/barilvillageofficial" class="social-link hover-effect-social" target="_blank" rel="noopener noreferrer nofollow" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/baril_village/" class="social-link hover-effect-social" target="_blank" rel="noopener noreferrer nofollow" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@BarilVillage" class="social-link hover-effect-social" target="_blank" rel="noopener noreferrer nofollow" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://x.com/BarilVillage" class="social-link hover-effect-social" target="_blank" rel="noopener noreferrer nofollow" aria-label="X (Twitter)">
+                        <i class="fab fa-x"></i>
+                    </a>
+                    <a href="https://www.pinterest.com/barilvillage/_profile/" class="social-link hover-effect-social" target="_blank" rel="noopener noreferrer nofollow" aria-label="Pinterest">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+                <br>
+                <div class="footer-logo">
+                    <img src="./images/baril_logo.png" alt="Baril Village Logo" style="width: 140px; height:auto;">
+                    <p data-en="Preserving our heritage, celebrating our culture."
+                    data-ne="हाम्रो सम्पदा संरक्षण गर्दै, हाम्रो संस्कृति मनाउँदै।"></p>
+                </div>
+            </div>
+
+         <!-- Feedback Form -->
+          <div class="feedback-form">
+          <div class="form-tabs">
+            <button class="tab-btn active" data-tab="message" data-en="Send Message" data-ne="सन्देश पठाउनुहोस्"></button>
+            <button class="tab-btn" data-tab="suggestion" data-en="Give Suggestion" data-ne="सुझाव दिनुहोस्"></button>
+            <button class="tab-btn" data-tab="feedback" data-en="Share Feedback" data-ne="प्रतिक्रिया दिनुहोस्"></button>
+            </div>
+  
+            <form 
+                action="https://formsubmit.co/info.barilvillage@gmail.com" 
+                method="POST"
+                id="contactForm"
+                class="active-tab">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="New Form Submission from Baril">
+                <input type="hidden" name="_sheet" value="1NGilFUhywivTGT5CAhW4lRPb6PGI8cPW8Suww7qnZWk">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" style="display:none"> <!-- Spam filter -->
+                
+                <!-- Hidden field for active tab -->
+                <input type="hidden" name="form_type" id="formType" value="message">
+                
+                <!--existing fields for inputes -->
+                <div class="floating-input">
+                <input type="text" id="name" name="name" required>
+                <label for="name" data-en="Your Name" data-ne="तपाईंको नाम"></label>
+                </div>
+                
+                <div class="floating-input">
+                <input type="email" id="email" name="email" required>
+                <label for="email" data-en="Your Email" data-ne="तपाईंको इमेल"></label>
+                </div>
+                
+                <div class="floating-input">
+                <input type="text" id="subject" name="subject" required>
+                <label for="subject" data-en="Subject" data-ne="विषय"></label>
+                </div>
+                
+                <div class="floating-input">
+                <textarea id="message" name="message" required></textarea>
+                <label for="message" data-en="Your Message" data-ne="तपाईंको सन्देश"></label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">
+                <span data-en="Send" data-ne="पठाउनुहोस्"></span>
+                <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+            
+            <!-- Success Message -->
+            <div class="form-success">
+                <i class="fas fa-check-circle"></i>
+                <h4 data-en="Thank you for your message!" data-ne="धन्यवाद, तपाईंको सन्देश पठिएको छ!"></h4>
+                <p data-en="We'll respond within 24 hours." data-ne="हामी २४ घण्टाभित्र जवाफ दिनेछौं।"></p>
+            </div>
+
+            </div>
+         </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; <span id="currentYear"></span> Baril Village, Darchula. <span data-en="  All rights reserved." data-ne="  सर्वाधिकार सुरक्षित।"></span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+   <!-- Back to Top Button -->
+ <a href="#home" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+    <span class="notification-badge" style="display: none;"></span>
+ </a>
+
+ <!-- Chatbot Widget -->
+ <div class="chatbot-widget">
+    <button class="chatbot-toggle" aria-label="Open chatbot">
+        <i class="fas fa-comment-dots"></i>
+        <span class="notification-badge"></span>
+    </button>
+    
+    <div class="chatbot-container">
+        <!-- <div class="chatbot-header">
+            <h4 data-en="Baril Village Assistant" data-ne="बारिल गाउँ सहयोगी">Baril Village Assistant</h4>
+            <button class="chatbot-close" aria-label="Close chatbot">&times;</button>
+        </div>
+        
+        <div class="chatbot-messages">
+            <div class="chatbot-message bot">
+                <p data-en="Hello! How can I help you today?" data-ne="नमस्ते! मैले तपाईंलाई कसरी मद्दत गर्न सक्छु?">Hello! How can I help you today?</p>
+            </div>
+        </div> -->
+        <div class="chatbot-header">
+    <img src="./images/baril_logo.png" alt="Baril Logo" class="header-logo">
+    <h4 data-en="Baril Village Assistant" data-ne="बारिल गाउँ सहयोगी">Baril Village Assistant</h4>
+    <button class="chatbot-close" aria-label="Close chatbot">×</button>
+</div>
+
+<div class="chatbot-messages">
+    <div class="chatbot-message bot">
+        <img src="./images/baril_logo.png" alt="Bot Avatar" class="bot-avatar">
+        <p data-en="Hello! How can I help you today?" data-ne="नमस्ते! मैले तपाईंलाई कसरी मद्दत गर्न सक्छु?">Hello! How can I help you today?</p>
+    </div>
+</div>
+        
+        <div class="chatbot-input">
+            <input type="text" placeholder="Type your message..." data-en="Type your message..." data-ne="आफ्नो सन्देश टाइप गर्नुहोस्...">
+            <button class="chatbot-send" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+        </div>
+        
+        <div class="chatbot-quick-replies">
+            <button class="quick-reply" data-en="About Baril" data-ne="बारिलको बारेमा">About Baril</button>
+            <button class="quick-reply" data-en="How to visit?" data-ne="कसरी जाने?">How to visit?</button>
+            <button class="quick-reply" data-en="Festivals" data-ne="चाडपर्व">Festivals</button>
+            <button class="quick-reply" data-en="Ancestral Deities" data-ne="कुल देवताहरू">Ancestral Deities</button>
+        </div>
+    </div>
+ </div>
+
+    
+        <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Leaflet core (only once) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Leaflet Fullscreen plugin (only once) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.fullscreen@1.6.0/Control.FullScreen.css" />
+    <script src="https://unpkg.com/leaflet.fullscreen@1.6.0/Control.FullScreen.js"></script>
+
+    <!-- Leaflet LocateControl plugin (only once) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <script src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+
+    
+    <!-- Main JS -->
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/main.js"></script> 
+    <!-- Load the JS file -->
+    <script type="module" src="api/submit.js"></script>
+    <!-- <script src="js/form-handler.js" defer></script> -->
+    <script src="js/chatbot.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
