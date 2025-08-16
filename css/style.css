@@ -1,6 +1,6 @@
 /**
  * @author Narendra Khadayat
- * @description Responsive styles added for mobile compatibility.
+ * ❤️
  */
 
 /* --- Base Styles & Variables --- */
@@ -75,7 +75,7 @@ body::before {
 img {
   max-width: 100%;
   height: auto;
-  display: block; /* Fixes bottom margin issue */
+  display: block; 
 }
 
 /* --- Typography --- */
@@ -188,7 +188,7 @@ a:hover {
   width: 100%;
 }
 .menu-toggle {
-  display: none; /* Hidden on desktop */
+  display: none; 
   background: none;
   border: none;
   color: var(--white);
@@ -267,7 +267,7 @@ a:hover {
 }
 .baril-heading {
   margin-bottom: 1.5rem;
-  font-size: clamp(2.5rem, 8vw, 4.8rem); /* RESPONSIVE FONT */
+  font-size: clamp(2.5rem, 8vw, 4.8rem); 
   line-height: 1.1;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
@@ -281,12 +281,12 @@ a:hover {
 .baril-sub {
   display: block;
   font-family: "Poppins", sans-serif;
-  font-size: clamp(1rem, 3vw, 1.8rem); /* RESPONSIVE FONT */
+  font-size: clamp(1rem, 3vw, 1.8rem); 
   margin-top: 10px;
   color: #f5f5f5;
 }
 .subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.5rem); /* RESPONSIVE FONT */
+  font-size: clamp(1rem, 2.5vw, 1.5rem); 
   margin-bottom: 2rem;
   padding: 0.5rem 1rem;
   background-color: rgba(255, 255, 255, 0.15);
@@ -296,7 +296,7 @@ a:hover {
 .hero-stats {
   display: flex;
   justify-content: center;
-  align-items: stretch; /* Make items equal height */
+  align-items: stretch; 
   gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 2.5rem;
@@ -414,7 +414,7 @@ a:hover {
   margin-right: auto;
 }
 .section-title {
-  font-size: clamp(2rem, 5vw, 2.5rem); /* RESPONSIVE FONT */
+  font-size: clamp(2rem, 5vw, 2.5rem); /* for font that responsive for everywhere */
   font-weight: 700;
   background: linear-gradient(90deg, #d97706, #d63384);
   -webkit-background-clip: text;
@@ -430,7 +430,7 @@ a:hover {
   border-radius: 50px;
 }
 .section-subtitle {
-  font-size: clamp(1rem, 2.5vw, 1.2rem); /* RESPONSIVE FONT */
+  font-size: clamp(1rem, 2.5vw, 1.2rem); 
   color: #555;
   font-style: italic;
   opacity: 0.8;
@@ -446,7 +446,7 @@ a:hover {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 .about-blog h1 {
-  font-size: clamp(1.5rem, 4vw, 2.2rem); /* RESPONSIVE FONT */
+  font-size: clamp(1.5rem, 4vw, 2.2rem); 
   text-align: center;
   margin-bottom: 2rem;
   background: linear-gradient(90deg, #d97706, #d63384);
@@ -500,7 +500,7 @@ a:hover {
   top: 15px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, #8D5B4C, #C89F68); /* Bronze Gradient */
+  background: linear-gradient(135deg, #8D5B4C, #C89F68); 
   color: var(--white);
   padding: var(--space-xs) var(--space-md);
   border-radius: 30px;
@@ -508,12 +508,12 @@ a:hover {
   z-index: 1;
   border: 2px solid rgba(255,255,255,0.8);
   transition: transform 0.3s ease;
-  /* Apply the animation here */
+  /* the animation */
   animation: pulse-glow 3s infinite ease-in-out;
 }
 
 .timeline-year:hover {
-  transform: translateX(-50%) scale(1.15); /* A bigger pop on hover */
+  transform: translateX(-50%) scale(1.15); 
   animation-play-state: paused; 
 }
 
@@ -572,29 +572,29 @@ a:hover {
   background-size: cover;
   background-position: center;
 }
-/* Replace the existing .culture-card h3 with this */
+
 .culture-card h3 {
   padding: var(--space-sm) var(--space-sm) 0.75rem; /* Adjust padding for the line */
-  color: var(--dark); /* A strong, readable dark color */
+  color: var(--dark); 
   font-size: 1.4rem;
-  position: relative; /* Needed for the underline */
+  position: relative; 
 }
 
-/* Add this new rule right after the one above */
+
 .culture-card h3::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: var(--space-sm); /* Aligns with the padding */
-  width: 50px; /* Width of the underline */
-  height: 4px; /* Thickness of the underline */
+  left: var(--space-sm); 
+  width: 50px; 
+  height: 4px; 
   background: linear-gradient(135deg, #8C1C13, #FF9A3C);
   border-radius: 2px;
 }
 .culture-card p {
   padding: 0 var(--space-sm) var(--space-sm);
   font-size: 0.9rem;
-  flex-grow: 1; /* Allows paragraph to fill space */
+  flex-grow: 1; 
 }
 
 /* --- Gallery Section --- */
@@ -607,8 +607,8 @@ a:hover {
 }
 .filter-btn {
   background: transparent;
-  border: 1px solid #a0a0a0; /* A subtle, neutral border */
-  color: #555; /* Dark grey text for readability */
+  border: 1px solid #a0a0a0; 
+  color: #555; 
   padding: 0.5rem 1.2rem;
   border-radius: 30px;
   cursor: pointer;
@@ -619,7 +619,7 @@ a:hover {
 }
 
 .filter-btn:hover:not(.active) {
-  background-color: rgba(44, 119, 68, 0.1); /* Subtle green hint on hover */
+  background-color: rgba(44, 119, 68, 0.1); 
   border-color: var(--primary);
   color: var(--primary);
 }
@@ -628,11 +628,11 @@ a:hover {
   background: linear-gradient(135deg, #8C1C13, #FF9A3C, #8C1C13);
   color: white;
   border-color: transparent;
-  transform: scale(1.05); /* Make it slightly bigger */
-  box-shadow: 0 0 20px rgba(255, 154, 60, 0.7); /* The glow effect */
+  transform: scale(1.05); 
+  box-shadow: 0 0 20px rgba(255, 154, 60, 0.7); 
 
   /* --- The Animation --- */
-  background-size: 200% auto; /* Make the gradient larger than the button */
+  background-size: 200% auto; 
   animation: animateGradient 4s ease infinite;
 }
 .filter-btn.active, .filter-btn:hover {
@@ -801,12 +801,12 @@ a:hover {
   margin-bottom: var(--space-sm);
   font-size: 1.6rem; /* Made text a bit bolder and larger for a better effect */
   font-weight: 700;
-  text-align: center; /* Ensures text is centered in the card */
+  text-align: center; 
   
   /* --- The Crisp Text Outline Style --- */
-  color: white; /* Bright white for the text fill */
+  color: white; 
   
-  /* This is the magic: multiple text shadows create a solid outline */
+  /* look the magic in CSS  */
   text-shadow: 
     -1.5px -1.5px 0 #000,  
      1.5px -1.5px 0 #000,
@@ -823,7 +823,7 @@ a:hover {
   border-radius: 30px;
   cursor: pointer;
   
-  /* THIS is the key line to center the button */
+  
   align-self: center; 
 }
 .btn-locate.glass-btn:hover {
@@ -916,29 +916,29 @@ a:hover {
   padding: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-/* --- Enhanced Contact Card Styles --- */
+
 
 .contact-card {
   background: var(--white);
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  text-align: center; /* This is the property that centers the logo */
+  text-align: center; 
 
 }
 .contact-card .contact-icon,
 .contact-card .contact-method i {
-  color: #f3b34d; /* The beautiful saffron gold color */
+  color: #f3b34d; 
 }
 
 .contact-icon {
   font-size: 2.5rem;
-  color: var(--primary); /* The primary green color */
+  color: var(--primary); 
   margin-bottom: 15px;
 }
 
 .contact-card h3 {
-    color: var(--dark); /* Resets heading to a dark color */
+    color: var(--dark); 
     font-size: 1.5rem;
 }
 
@@ -949,10 +949,10 @@ a:hover {
 .contact-method {
   display: flex;
   align-items: center;
-  justify-content: center; /* Ensures content is centered */
+  justify-content: center; 
   gap: 10px;
   margin: 15px 0;
-  color: var(--text); /* The default text color */
+  color: var(--text); 
   text-decoration: none;
   padding: 8px 15px;
   border-radius: 8px;
@@ -960,14 +960,14 @@ a:hover {
 }
 
 .contact-method i {
-  color: var(--primary); /* Green icons */
+  color: var(--primary); 
   width: 20px;
   text-align: center;
 }
 
 /* Original Hover Effects */
 .contact-method.hover-effect:hover {
-  background: #f0f8ff; /* Light blue background on hover */
+  background: #f0f8ff; 
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -1069,46 +1069,46 @@ a:hover {
 .form-success { text-align: center; padding: 30px; display: none; }
 .form-success i { font-size: 3rem; color: var(--primary); margin-bottom: 15px; }
 
-/* --- Add this animation to the bottom of your CSS file --- */
+
 @keyframes animated-border {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-/* --- New Feedback Form Styles --- */
+/* ---  Feedback Form Styles --- */
 
 .feedback-form {
-  background: #f8f9fa; /* A very light, clean off-white */
+  background: #f8f9fa; 
   border-radius: 12px;
   padding: 30px;
-  position: relative; /* Crucial for the border effect */
-  overflow: hidden; /* Hides the parts of the border outside the card */
+  position: relative; 
+  overflow: hidden; 
   z-index: 1;
 }
 
-/* The Animated Gradient Border */
+/* The Animated  Border */
 .feedback-form::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 150%; /* Make it larger than the card */
+  width: 150%; 
   height: 150%;
   background: conic-gradient(
     #FF9A3C, #8C1C13, #0033A0, #2c7744, #FF9A3C
-  ); /* A gradient of all your thematic colors */
+  ); 
   z-index: -1;
   animation: animated-border 6s linear infinite;
 }
 
-/* A second pseudo-element to create the "card" effect over the border */
+
 .feedback-form::after {
   content: '';
   position: absolute;
-  inset: 4px; /* This controls the border thickness */
-  background: #f8f9fa; /* Same color as the main background */
-  border-radius: 10px; /* Must be slightly smaller than parent */
+  inset: 4px; 
+  background: #f8f9fa; 
+  border-radius: 10px; 
   z-index: -1;
 }
 
@@ -1117,7 +1117,7 @@ a:hover {
   display: flex;
   gap: 5px;
   margin-bottom: 25px;
-  background: #e9ecef; /* A slightly darker background for the tab bar */
+  background: #e9ecef; 
   padding: 5px;
   border-radius: 8px;
 }
@@ -1125,7 +1125,7 @@ a:hover {
 .tab-btn {
   flex: 1;
   padding: 10px;
-  background: transparent; /* Inactive tabs are transparent */
+  background: transparent; 
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -1135,21 +1135,21 @@ a:hover {
 }
 
 .tab-btn.active {
-  background: var(--white); /* Active tab is a clean white */
+  background: var(--white); 
   color: var(--primary);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* --- Refreshed Input Field Styles --- */
+/* ---  Input Field Styles --- */
 .floating-input input,
 .floating-input textarea {
   width: 100%;
   padding: 15px;
-  border: none; /* Remove all side borders */
-  border-bottom: 2px solid #ccc; /* Keep only the bottom border */
-  border-radius: 0; /* No radius for a sharp look */
+  border: none; 
+  border-bottom: 2px solid #ccc; 
+  border-radius: 0; 
   font-size: 1rem;
-  background: transparent; /* Make inputs transparent */
+  background: transparent; 
   transition: border-color 0.3s ease;
 }
 
@@ -1157,7 +1157,7 @@ a:hover {
 .floating-input input:focus,
 .floating-input textarea:focus {
   outline: none;
-  border-image: linear-gradient(to right, #8C1C13, #FF9A3C) 1; /* Gradient border on focus */
+  border-image: linear-gradient(to right, #8C1C13, #FF9A3C) 1; 
 }
 
 .floating-input label {
@@ -1167,7 +1167,7 @@ a:hover {
   color: #999;
   transition: all 0.3s ease;
   pointer-events: none;
-  /* Remove background from label to look cleaner */
+  
 }
 
 .floating-input input:focus + label,
@@ -1178,19 +1178,19 @@ a:hover {
   font-size: 0.8rem;
   color: var(--primary);
   padding: 0 5px;
-  background: #f8f9fa; /* Match the card background */
+  background: #f8f9fa; 
 }
 
-/* --- Refreshed Submit Button --- */
+/* --- Re Submit Button --- */
 #contactForm .btn-primary {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  width: 100%; /* Make button full-width */
+  width: 100%; 
   justify-content: center;
   padding: 15px;
   font-size: 1.1rem;
-  /* A new, powerful gradient */
+  
   background: linear-gradient(135deg, #c6574f, #a16c6c);
   box-shadow: 0 4px 15px rgba(140, 28, 19, 0.4);
   border: none;
@@ -1210,21 +1210,21 @@ a:hover {
   text-align: center;
 }
 
-/* --- Thematic "Prayer Wheel" Back to Top Button --- */
+/* --- Back to Top Button --- */
 .back-to-top {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  width: 55px; /* Slightly larger */
+  width: 55px; 
   height: 55px;
-  background: linear-gradient(135deg, #df5147, #cc8b4e); /* Saffron/Maroon gradient */
+  background: linear-gradient(135deg, #df5147, #cc8b4e); 
   color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
-  border: 2px solid white; /* Adds a nice defining edge */
+  border: 2px solid white; 
   box-shadow: 0 5px 15px rgba(140, 28, 19, 0.4);
   z-index: 999;
 
@@ -1241,7 +1241,7 @@ a:hover {
 }
 
 .back-to-top:hover {
-  transform: scale(1.1) rotate(-15deg); /* Adds a little spin on hover */
+  transform: scale(1.1) rotate(-15deg); 
   box-shadow: 0 8px 20px rgba(140, 28, 19, 0.5);
 }
 
@@ -1250,13 +1250,13 @@ a:hover {
 }
 
 .back-to-top:hover i {
-  transform: scale(1.2); /* Makes the arrow pop */
+  transform: scale(1.2); 
 }
 
 /*
-==============================================
-    NEW UNIQUE & INTERESTING CHATBOT STYLES
-==============================================
+
+     CHATBOT STYLES ..
+
 */
 
 .chatbot-widget {
@@ -1270,7 +1270,7 @@ a:hover {
 .chatbot-toggle {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #8C1C13, #FF9A3C); /* Saffron/Maroon Gradient */
+  background: linear-gradient(135deg, #8C1C13, #FF9A3C); 
   color: white;
   border: none;
   border-radius: 50%;
@@ -1288,7 +1288,7 @@ a:hover {
   box-shadow: 0 8px 20px rgba(140, 28, 19, 0.5);
 }
 
-/* --- Main Chat Container --- */
+
 .chatbot-container {
   position: absolute;
   bottom: 80px;
@@ -1297,7 +1297,7 @@ a:hover {
   max-width: 90vw;
   height: 450px;
   max-height: 70vh;
-  background-color: #f4f1eb; /* A warm, paper-like off-white */
+  background-color: #f4f1eb; 
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   border: 1px solid #dcdcdc;
@@ -1317,7 +1317,7 @@ a:hover {
   visibility: visible;
 }
 
-/* --- Themed Header with Logo --- */
+/* ---  Header with Logo --- */
 .chatbot-header {
   background: linear-gradient(135deg, #8C1C13, #FF9A3C);
   color: white;
@@ -1339,7 +1339,7 @@ a:hover {
   color: white;
   font-size: 1.1rem;
   margin: 0;
-  flex-grow: 1; /* Pushes close button to the end */
+  flex-grow: 1; /
 }
 
 .chatbot-close {
@@ -1363,7 +1363,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  /* Subtle texture background */
+  
   background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
 }
 
@@ -1381,13 +1381,13 @@ a:hover {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- New: Bot Messages with Avatar --- */
+/* --- Bot Messages with Avatar --- */
 .chatbot-message.bot {
   background-color: #ffffff;
   align-self: flex-start;
   border-bottom-left-radius: 5px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  /* New flex layout for avatar */
+ 
   display: flex;
   align-items: flex-start;
   gap: 10px;
@@ -1397,7 +1397,7 @@ a:hover {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  flex-shrink: 0; /* Prevents avatar from shrinking */
+  flex-shrink: 0; 
 }
 
 .chatbot-message.bot p {
@@ -1406,7 +1406,7 @@ a:hover {
 
 /* --- Themed User Messages --- */
 .chatbot-message.user {
-  background: #0033A0; /* Himalayan Blue */
+  background: #0033A0; 
   color: white;
   align-self: flex-end;
   border-bottom-right-radius: 5px;
@@ -1437,7 +1437,7 @@ a:hover {
 }
 
 .chatbot-send {
-  background: #8C1C13; /* Maroon */
+  background: #8C1C13; 
   color: white;
   border: none;
   width: 45px;
@@ -1483,145 +1483,12 @@ a:hover {
   color: white;
   transform: translateY(-2px);
 }
-/* .chatbot-widget {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-.chatbot-toggle {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  cursor: pointer;
-  box-shadow: var(--shadow-hover);
-  transition: var(--transition);
-}
-.chatbot-toggle:hover {
-  transform: scale(1.1);
-}
-.chatbot-container {
-  position: absolute;
-  bottom: 80px;
-  right: 0;
-  width: 350px;
-  max-width: 90vw;
-  height: 450px;
-  background-color: #f8f9fa;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-hover);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transform: scale(0.5) translateY(100%);
-  transform-origin: bottom right;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-.chatbot-container.active {
-  transform: scale(1) translateY(0);
-  opacity: 1;
-  visibility: visible;
-}
-.chatbot-header {
-  background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
-  color: white;
-  padding: var(--space-md);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.chatbot-header h4 {
-    color: white;
-    font-size: 1.2rem;
-}
-.chatbot-close {
-  background: none; border: none; color: var(--white); font-size: 1.5rem; cursor: pointer;
-}
-.chatbot-messages {
-  flex: 1;
-  padding: var(--space-md);
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
-.chatbot-message {
-  max-width: 80%;
-  padding: var(--space-sm);
-  border-radius: 18px;
-}
-.chatbot-message.bot {
-  background-color: white;
-  align-self: flex-start;
-  border-bottom-left-radius: 5px;
-}
-.chatbot-message.user {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  align-self: flex-end;
-  border-bottom-right-radius: 5px;
-}
-.chatbot-input {
-  display: flex;
-  padding: var(--space-md);
-  border-top: 1px solid #eee;
-  gap: var(--space-sm);
-}
-.chatbot-input input {
-  flex: 1;
-  padding: var(--space-sm);
-  border: 1px solid #ddd;
-  border-radius: 30px;
-  outline: none;
-}
-.chatbot-send {
-  background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
-  color: white;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.chatbot-quick-replies {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-  padding: 0 var(--space-md) var(--space-md);
-}
-.quick-reply {
-  background-color: rgba(142, 151, 253, 0.2);
-  color: #4e54c8;
-  border: 1px solid rgba(142, 151, 253, 0.3);
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: 30px;
-  font-size: 0.8rem;
-  cursor: pointer;
-}
-.quick-reply:hover {
-  background-color: #4e54c8;
-  color: white;
-} */
 
 /*
- ============================================
     RESPONSIVE MEDIA QUERIES
- ============================================
+
 */
 
-/* --- Tablet and smaller devices (<= 768px) --- */
 /* --- Tablet and smaller devices (<= 768px) --- */
 @media (max-width: 768px) {
   .section {
@@ -1630,57 +1497,57 @@ a:hover {
   
   /* --- Header & Nav --- */
   .menu-toggle {
-    display: block; /* Show hamburger icon */
-    position: relative; /* Ensure it's clickable above other content */
-    z-index: 1002; /* Place it above the menu overlay */
+    display: block; 
+    position: relative; 
+    z-index: 1002; 
   }
 
   /* --- Styles for the Menu container BEFORE it's active --- */
   .navbar ul {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center links vertically */
-    align-items: center; /* Center links horizontally */
+    justify-content: center; 
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     
-    /* --- The Professional Frosted Glass Effect --- */
-    background: rgba(15, 25, 40, 0.85); /* Dark, semi-transparent background */
+    /* --- The  Glass Effect --- */
+    background: rgba(15, 25, 40, 0.85); 
     backdrop-filter: blur(0.5px);
-    -webkit-backdrop-filter: blur(0.3px); /* For Safari support */
+    -webkit-backdrop-filter: blur(0.3px); 
     
-    z-index: 1001; /* Behind the menu toggle but above page content */
+    z-index: 1001; 
     
     /* --- Animation setup --- */
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-100%); /* Start off-screen to the left */
+    transform: translateX(-100%); 
     transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s ease, visibility 0.4s ease;
     
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 2rem; /* Space between menu items */
+    gap: 2rem; 
   }
 
   /* --- Styles for the Menu WHEN it's active --- */
   .navbar.active ul {
     opacity: 1;
     visibility: visible;
-    transform: translateX(0); /* Slide into view */
+    transform: translateX(0); 
   }
 
-  /* Animate individual menu links for a graceful entrance */
+  /* Animate  menu links for an entrance */
   .navbar.active ul li {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInLinks 0.4s ease forwards;
   }
 
-  /* Stagger the animation for each link */
+  /*  animation for each link */
   .navbar.active ul li:nth-child(1) { animation-delay: 0.2s; }
   .navbar.active ul li:nth-child(2) { animation-delay: 0.3s; }
   .navbar.active ul li:nth-child(3) { animation-delay: 0.4s; }
@@ -1699,13 +1566,13 @@ a:hover {
   /* Style for the links themselves */
   .navbar ul a {
     color: white;
-    font-size: 1.5rem; /* Larger, easier to tap font */
+    font-size: 1.5rem; 
     font-weight: 600;
   }
 
-  /* When menu is open, change hamburger to an 'X' */
+  /* When menu is open */
   .navbar.active .menu-toggle i::before {
-    content: '\f00d'; /* Font Awesome 'X' icon */
+    content: '\f00d';
     font-weight: 900;
   }
 
@@ -1720,17 +1587,17 @@ a:hover {
 
   /* --- Timeline --- */
   .timeline::before {
-    left: 20px; /* Move line to the left */
+    left: 20px; 
   }
   .timeline-item {
-    padding-left: 40px; /* Add space for content */
+    padding-left: 40px; 
   }
   .timeline-year {
     left: 20px;
-    top: -10px; /* Position above content */
+    top: -10px; 
   }
   .timeline-content {
-    width: 100%; /* Full width */
+    width: 100%; 
   }
   .timeline-item:nth-child(odd) .timeline-content,
   .timeline-item:nth-child(even) .timeline-content {
@@ -1738,13 +1605,13 @@ a:hover {
     margin-top: 2rem;
   }
   .timeline-content::after {
-    left: -10px; /* Always on the left */
+    left: -10px; 
     right: auto;
   }
 
   /* --- Grids --- */
   .culture-grid, .gallery-grid, .location-grid {
-    grid-template-columns: 1fr; /* Stack to single column */
+    grid-template-columns: 1fr; 
   }
   .developer-card {
     grid-template-columns: 1fr;
@@ -1781,7 +1648,7 @@ a:hover {
       font-size: 1rem;
   }
   .hero-weather-widget {
-    display: none; /* Hide widget on very small screens */
+    display: none; 
   }
   .about-blog {
       padding: 2rem 1.5rem;
@@ -1798,7 +1665,6 @@ a:hover {
   .chatbot-widget { right: 10px; }
 }
 
-/* Add this animation keyframe at the bottom of your CSS file */
 @keyframes pulse-glow {
   0% { box-shadow: 0 0 5px rgba(200, 159, 104, 0.4); }
   50% { box-shadow: 0 0 15px rgba(200, 159, 104, 0.8); }
@@ -1809,4 +1675,5 @@ a:hover {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+
 }
