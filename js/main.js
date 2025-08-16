@@ -67,7 +67,6 @@ function initLanguageToggle() {
 
 /**
  * Date and Time Display
- * Shows current date and time in the header and hero section
  */
 function initDateTime() {
   function updateDateTime() {
@@ -149,76 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// // --- Total Visitor Counter ---
-// document.addEventListener('DOMContentLoaded', function() {
-//     const visitorCountElement = document.getElementById('visitorCount');
-//     const countApiKey = 'baril-village-total-visits'; // Your unique key
-
-//     // This function sends a request to the API to increase the count and get the new total
-//     function updateVisitorCount() {
-//         fetch(`https://api.countapi.xyz/hit/baril-village/${countApiKey}`)
-//             .then(response => response.json())
-//             .then(data => {
-//                 if (visitorCountElement) {
-//                     visitorCountElement.textContent = data.value;
-//                 }
-//             })
-//             .catch(error => {
-//                 console.error("Could not fetch visitor count:", error);
-//                 if (visitorCountElement) {
-//                     visitorCountElement.textContent = 'Error';
-//                 }
-//             });
-//     }
-
-//     // Run the function as soon as the page loads
-//     updateVisitorCount();
-// });
-
-// /**
-//  * Visitor Counter
-//  * Simulates a visitor counter 
-//  */
-
-// function initVisitorCounter() {
-//   const counterElement = document.getElementById("visitorCount");
-//   if (!counterElement) return;
-
-//   //  animate the number counting up
-//   function animateValue(element, start, end, duration) {
-//     let startTimestamp = null;
-//     const step = (timestamp) => {
-//       if (!startTimestamp) startTimestamp = timestamp;
-//       const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-//       element.textContent = Math.floor(progress * (end - start) + start);
-//       if (progress < 1) {
-//         window.requestAnimationFrame(step);
-//       }
-//     };
-//     window.requestAnimationFrame(step);
-//   }
-
-  
-//   fetch('/api/counter')
-//     .then(response => response.json())
-//     .then(data => {
-//       if (data.count) {
-//         const totalVisitors = data.count;
-//         // Animate the counter from its previous value (or 0) to the new total
-//         const startValue = parseInt(counterElement.textContent) || 0;
-//         animateValue(counterElement, startValue, totalVisitors, 1500);
-//       }
-//     })
-//     .catch(error => {
-//       console.error("Error fetching visitor count:", error);
-//       counterElement.textContent = "N/A";
-//     });
-// }
-
-
-// document.addEventListener('DOMContentLoaded', initVisitorCounter);
-
-//real Weather API Data
+// Weather API Data
 
 async function fetchWeather() {
   const apiKey = "91be7cc07adf1200a79288349d7d1bd9";
@@ -308,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!galleryGrid) return;
 
-  // Gallery Data - REPLACE WITH YOUR IMAGE PATHS
+  // Gallery Data - 
   const galleryData = [
     {
       src: "./images/baril_front_view.jpg",
@@ -385,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Load more button - FIXED VERSION
+  // Load more button 
   if (loadMoreBtn) {
     loadMoreBtn.addEventListener("click", function () {
       displayedItems += 4; // Load 4 more items
@@ -395,7 +325,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (displayedItems >= filteredData.length) {
         this.style.display = "none";
       } else {
-        this.style.display = "inline-block"; // Ensure it's visible if not all items shown
+        this.style.display = "inline-block"; 
       }
     });
   }
@@ -428,7 +358,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Render gallery (FIXED VERSION)
+  // Render gallery fixed
   function renderGallery() {
     galleryGrid.innerHTML = "";
 
@@ -549,7 +479,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //  for all "View on Map" buttons
   document.querySelectorAll(".btn-locate").forEach((button) => {
     button.addEventListener("click", function (e) {
-      // Prevent default if it's a button within a form
       e.preventDefault();
 
       //  the location key from parent card
@@ -563,7 +492,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // 2. Fly to location on map 
       if (location) {
-        // Small delay to ensure map is visible before animation
         setTimeout(() => {
           map.flyTo(location.coords, 16, {
             duration: 1.5,
@@ -695,7 +623,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add markers to map
   Object.keys(locations).forEach((key) => {
     const location = locations[key];
-    const icon = icons[location.type.toLowerCase()] || icons.residential; // fallback
+    const icon = icons[location.type.toLowerCase()] || icons.residential; 
 
     L.marker(location.coords, {
       icon: icon,
@@ -1055,5 +983,6 @@ function initBackToTop() {
     });
   });
 }
+
 
 
