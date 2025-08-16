@@ -4,7 +4,7 @@
  */
 //
 export default async function handler(req, res) {
-  // Set response header first
+  // response header first
   res.setHeader('Content-Type', 'application/json');
 
   // Only allow POST requests
@@ -18,7 +18,7 @@ export default async function handler(req, res) {
   try {
     const { name, email, subject, message, formType } = req.body;
     
-    // Validate required fields
+    // Validate fields
     if (!name || !email || !message) {
       return res.status(400).json({
         error: 'Missing fields',
@@ -42,3 +42,4 @@ export default async function handler(req, res) {
     });
   }
 }
+
