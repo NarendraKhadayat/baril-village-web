@@ -150,6 +150,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
+  margin-left: -60px;
 }
 .logo img {
   width: 50px;
@@ -199,12 +200,13 @@ a:hover {
 
 /* --- Language Toggle --- */
 .language-wrapper {
-  position: fixed;
+  position: static;
   top: 10px;
   left: 10px;
   z-index: 1001;
 }
 .language-toggle button {
+  margin-left: -20px;
   background: linear-gradient(to right, #e6c9ab, #baa699);
   border: none;
   border-radius: 30px;
@@ -1677,3 +1679,4 @@ a:hover {
   100% { background-position: 0% 50%; }
 
 }
+
