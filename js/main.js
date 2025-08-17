@@ -107,8 +107,6 @@ function initDateTime() {
   updateDateTime();
   setInterval(updateDateTime, 60000);
 }
-
-// counter visitor feature
 document.addEventListener('DOMContentLoaded', function () {
     const visitorCountElement = document.getElementById('visitorCount');
 
@@ -120,21 +118,24 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => {
             console.error("Visitor counter error:", error);
-            visitorCountElement.textContent = "1K+"; // Fallback display
+            visitorCountElement.textContent = "1K+"; // fallback
         });
 
     function displayCount(count) {
-        if (count <= 10000) {
-            // Show full number with animation
+        if (count < 10000) {
+            // Animate 0 → exact number
             animateValue(visitorCountElement, 0, count, 1500);
         } else {
-            // Show in K+ format permanently after passing 10K
-            const thousands = Math.floor(count / 1000);
-            visitorCountElement.textContent = `${thousands}K+`;
+            // First animate till 10000
+            animateValue(visitorCountElement, 0, 10000, 1500, () => {
+                // Then show in K+ format
+                const thousands = Math.floor(count / 1000);
+                visitorCountElement.textContent = `${thousands}K+`;
+            });
         }
     }
 
-    function animateValue(element, start, end, duration) {
+    function animateValue(element, start, end, duration, callback) {
         let startTimestamp = null;
         const step = (timestamp) => {
             if (!startTimestamp) startTimestamp = timestamp;
@@ -142,11 +143,14 @@ document.addEventListener('DOMContentLoaded', function () {
             element.textContent = Math.floor(progress * (end - start) + start);
             if (progress < 1) {
                 window.requestAnimationFrame(step);
+            } else if (callback) {
+                callback();
             }
         };
         window.requestAnimationFrame(step);
     }
 });
+
 
 // Weather API Data
 
@@ -983,6 +987,7 @@ function initBackToTop() {
     });
   });
 }
+
 
 
 
