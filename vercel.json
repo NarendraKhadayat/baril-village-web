@@ -1,0 +1,8 @@
+{
+  "builds": [
+    {
+      "src": "scripts/counter.js",
+      "use": "@vercel/static"
+    }
+  ]
+}
