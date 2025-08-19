@@ -1,8 +1,1 @@
-{
-  "builds": [
-    {
-      "src": "api/counter.js",
-      "use": "@vercel/static"
-    }
-  ]
-}
+
