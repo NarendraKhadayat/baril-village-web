@@ -355,8 +355,8 @@ a:hover {
 }
 
 .stat-number {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 1.0rem;
+  font-weight: 400;
 }
 .stat-label {
   font-size: 0.9rem;
@@ -1715,6 +1715,7 @@ a:hover {
   100% { background-position: 0% 50%; }
 
 }
+
 
 
 
